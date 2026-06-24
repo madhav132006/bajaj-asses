@@ -7,9 +7,10 @@ import BadgeList from './components/BadgeList';
 import './App.css';
 
 const API_URL =
-  window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  import.meta.env.VITE_API_URL ||
+  (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     ? 'http://localhost:3000/bfhl'
-    : '/bfhl';
+    : '/bfhl');
 
 export default function App() {
   const [result, setResult] = useState(null);
