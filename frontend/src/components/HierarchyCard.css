@@ -1,0 +1,97 @@
+/* HierarchyCard */
+
+.hierarchy-card {
+  background: rgba(0,0,0,.22);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 22px;
+  margin-bottom: 16px;
+  transition: border-color .25s var(--ease), transform .25s var(--ease);
+  animation: fadeUp .4s var(--ease) both;
+}
+.hierarchy-card:hover {
+  border-color: var(--border-hi);
+  transform: translateY(-2px);
+}
+.hierarchy-card:last-child {
+  margin-bottom: 0;
+}
+
+/* Header */
+.hierarchy-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.root-badge {
+  font-family: var(--mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  width: 44px; height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(124,106,255,.28);
+}
+.hierarchy-meta {
+  font-size: .88rem;
+  color: var(--text-dim);
+}
+.hierarchy-meta strong { color: var(--text); }
+
+/* Badges */
+.depth-badge {
+  font-family: var(--mono);
+  font-size: .78rem;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 20px;
+  background: rgba(52,211,153,.12);
+  color: var(--green);
+  border: 1px solid rgba(52,211,153,.22);
+}
+.cycle-badge {
+  font-family: var(--mono);
+  font-size: .78rem;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 20px;
+  background: rgba(248,113,113,.12);
+  color: var(--red);
+  border: 1px solid rgba(248,113,113,.22);
+  animation: pulseBadge 2s ease-in-out infinite;
+}
+
+/* Tree Visual */
+.tree-visual {
+  font-family: var(--mono);
+  font-size: .85rem;
+  line-height: 2;
+  padding: 16px 20px;
+  background: rgba(0,0,0,.28);
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+}
+.tree-line {
+  white-space: pre;
+}
+.tree-branch {
+  color: rgba(124,106,255,.45);
+}
+.tree-node {
+  color: var(--text);
+  font-weight: 500;
+}
+.tree-root-node {
+  color: var(--accent);
+  font-weight: 700;
+}
+.tree-cycle-msg {
+  color: var(--red);
+  font-style: italic;
+}

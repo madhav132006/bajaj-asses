@@ -1,0 +1,77 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   App-level component styles
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ─── Hero ───────────────────────────────────────────────────────── */
+.hero {
+  text-align: center;
+  margin-bottom: 48px;
+  animation: fadeUp .6s var(--ease) both;
+}
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: -.03em;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero p {
+  color: var(--text-dim);
+  font-size: 1.05rem;
+  margin-top: 8px;
+}
+
+/* ─── Glass Card (shared) ────────────────────────────────────────── */
+.card {
+  background: var(--glass);
+  backdrop-filter: blur(var(--glass-b));
+  -webkit-backdrop-filter: blur(var(--glass-b));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 24px;
+  transition: border-color .25s var(--ease), box-shadow .25s var(--ease);
+  animation: fadeUp .5s var(--ease) both;
+}
+.card:hover {
+  border-color: var(--border-hi);
+  box-shadow: 0 0 32px rgba(124,106,255,.06);
+}
+.card-title {
+  font-size: .9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--text-dim);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card-title .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+}
+
+/* ─── Results Wrapper ────────────────────────────────────────────── */
+.results-wrapper {
+  animation: fadeUp .45s var(--ease) both;
+}
+
+/* ─── Empty State ────────────────────────────────────────────────── */
+.empty-state {
+  text-align: center;
+  padding: 24px;
+  color: var(--text-dim);
+  font-size: .9rem;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .hero h1 { font-size: 1.8rem; }
+  .card { padding: 20px; }
+}

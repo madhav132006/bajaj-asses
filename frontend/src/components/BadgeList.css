@@ -1,0 +1,27 @@
+/* BadgeList */
+
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.badge {
+  font-family: var(--mono);
+  font-size: .82rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: transform .2s var(--ease);
+}
+.badge:hover { transform: scale(1.06); }
+
+.badge-red {
+  background: rgba(248,113,113,.10);
+  color: var(--red);
+  border: 1px solid rgba(248,113,113,.22);
+}
+.badge-amber {
+  background: rgba(251,191,36,.10);
+  color: var(--amber);
+  border: 1px solid rgba(251,191,36,.22);
+}
