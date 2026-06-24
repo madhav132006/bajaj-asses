@@ -46,7 +46,7 @@ class UnionFind {
 }
 
 // ─── POST /bfhl ─────────────────────────────────────────────────────
-app.post("/bfhl", (req, res) => {
+app.post(["/bfhl", "/"], (req, res) => {
   try {
     const { data } = req.body;
 
@@ -264,6 +264,11 @@ function calcDepth(tree) {
   }
   return 1 + maxChildDepth;
 }
+
+// ─── Health Check ───────────────────────────────────────────────────
+app.get(["/bfhl", "/"], (req, res) => {
+  res.send("BFHL server is running.");
+});
 
 // ─── Serve frontend ──────────────────────────────────────────────────
 const frontendDistPath = path.join(__dirname, "..", "frontend", "dist");
